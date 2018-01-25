@@ -81,8 +81,9 @@ public class MainActivity extends AppCompatActivity {
 
         if (requestCode == NEW_WORD_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK) {
            // TODO (MA6) instantiate a Word object from the data received back from the Intent
-
-        Word word = new Word(data.getStringExtra("EXTRA_REPLY"));
+        Bundle b = data.getExtras();
+        Word word = new Word(data.getExtras().getString("com.example.musfiqrahman.roomwordsample.REPLY"));
+        Log.d("word", word.getWord() + "");
             // TODO (MA7)insert the word object to the WordModelView.
             wordViewModel.insert(word);
 
