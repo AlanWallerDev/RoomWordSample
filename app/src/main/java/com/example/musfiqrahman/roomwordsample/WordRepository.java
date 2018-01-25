@@ -40,7 +40,7 @@ public class WordRepository {
 
     public void insertWord(Word word){
         // TODO (WR3) insert Word using AsyncTask class
-        new InsertAsyncTask(wordDao).execute();
+        new InsertAsyncTask(wordDao).execute(word);
 
     }
 
